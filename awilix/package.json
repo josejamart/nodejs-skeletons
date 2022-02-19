@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build": "tsc -b",
+    "migration:create": "typeorm migration:create",
+    "migration:generate": "typeorm migration:generate",
+    "migration:run": "typeorm migration:run",
+    "migration:revert": "typeorm migration:revert"
+  },
+  "dependencies": {
+    "awilix": "^6.1.0",
+    "typeorm": "^0.2.43",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5",
+    "@types/node": "^17.0.18"
+  }
+}
