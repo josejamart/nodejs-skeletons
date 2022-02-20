@@ -1,4 +1,6 @@
 
+
+import 'module-alias/register';
 import express , {Request} from "express";
 import users from './user';
 import {container} from '@infra/awilix/context-manager';

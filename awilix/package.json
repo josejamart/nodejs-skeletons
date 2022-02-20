@@ -5,14 +5,18 @@
     "migration:generate": "typeorm migration:generate",
     "migration:run": "typeorm migration:run",
     "migration:revert": "typeorm migration:revert",
-    "start:express": "node ./dist/infra/express/index.js"
+    "start:express": "node ./dist/infra/express/index.js",
+    "start:graphql": "node ./dist/infra/graphql/index.js"
   },
   "dependencies": {
+    "apollo-server": "^3.6.3",
     "awilix": "^6.1.0",
     "express": "^4.17.3",
+    "graphql": "^15.3.0",
     "module-alias": "^2.2.2",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
+    "type-graphql": "^1.1.1",
     "typeorm": "^0.2.43"
   },
   "devDependencies": {
