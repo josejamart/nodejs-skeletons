@@ -1,5 +1,5 @@
 import express from 'express';
-import { RequestWithContext } from '@infra/express'; 
+import { RequestWithContext } from '@shared/infra/express'; 
 import {TYPES} from '@user/application/types';
 import { GetUsersUserCase } from '@user/application/getUsers';
 
