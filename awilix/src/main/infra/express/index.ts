@@ -1,9 +1,9 @@
 
-
+import 'reflect-metadata';
 import 'module-alias/register';
 import express , {Request} from "express";
 import users from './user';
-import {container} from '@infra/awilix/context-manager';
+import {container} from '@infra/awilix';
 import { AwilixContainer } from "awilix";
 import { registerTypeorm } from "@infra/typeorm/register";
 

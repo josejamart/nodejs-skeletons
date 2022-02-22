@@ -1,9 +1,9 @@
 {
   "type": "sqlite",
   "database": "./mydb.sql",
-  "entities": ["dist/infra/typeorm/entity/*.js"],
-  "migrations": ["dist/infra/typeorm/migration/*.js"],
+  "entities": ["dist/main/infra/typeorm/entity/*.js"],
+  "migrations": ["dist/main/infra/typeorm/migration/*.js"],
   "cli": {
-    "migrationsDir": "src/infra/typeorm/migration"
+    "migrationsDir": "src/main/infra/typeorm/migration"
   }
 }
