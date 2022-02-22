@@ -1,7 +1,7 @@
 import express from 'express';
-import { RequestWithContext } from '..'; 
-import {TYPES} from '@usecases/types';
-import { GetUsersUserCase } from '@usecases/user/getUsers';
+import { RequestWithContext } from '@infra/express'; 
+import {TYPES} from '@user/application/types';
+import { GetUsersUserCase } from '@user/application/getUsers';
 
 const router = express.Router();
 

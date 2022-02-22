@@ -1,4 +1,4 @@
-import { User } from "@domain/user";
+import { User } from "./model";
 
 export interface UserRepository {
   findByName(firstName: string, lastName: string): Promise<User[]>;

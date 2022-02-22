@@ -1,5 +1,5 @@
 import { Resolver, Query, Ctx } from "type-graphql";
-import { User } from "@infra/typeorm/entity/user";
+import { User } from "@user/infra/typeorm/entity";
 
 @Resolver()
 export class UserResolver {

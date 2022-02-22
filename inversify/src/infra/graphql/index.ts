@@ -2,7 +2,7 @@ import 'module-alias/register';
 import { registerTypeorm } from '@infra/typeorm/register';
 import { ApolloServer, gql } from 'apollo-server';
 import { buildSchema } from "type-graphql";
-import { UserResolver } from './resolvers/user';
+import { UserResolver } from '@user/infra/grpahql/resolver';
 import { container } from '@infra/inversify/context-manager';
 
 

@@ -1,10 +1,10 @@
 import "reflect-metadata";
 import 'module-alias/register';
 import express, { Request } from "express";
-import users from './user';
+import users from '@user/infra/express/router';
 import { registerTypeorm } from "@infra/typeorm/register";
-export * from '@usecases/index';
-export * from '@infra/typeorm';
+export * from '@user/application/index';
+export * from '@user/infra/typeorm/repository';
 import { Container } from 'inversify';
 import { container } from '@infra/inversify/context-manager';
 

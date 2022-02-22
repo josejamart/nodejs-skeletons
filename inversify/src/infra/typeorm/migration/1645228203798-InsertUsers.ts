@@ -1,5 +1,5 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
-import { User } from "../entity/user";
+import { User } from "@user/infra/typeorm/entity";
 
 export class InsertUsers1645228203798 implements MigrationInterface {
   values: any[];

@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
-import { User as UserDomain } from "@domain/user";
+import { User as UserDomain } from "@user/domain/model";
 import { ObjectType, Field, ID } from "type-graphql";
 
 @Entity()

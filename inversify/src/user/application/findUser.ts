@@ -1,8 +1,8 @@
-import { UserRepository } from "@adapters/repositories/user-repository";
-import { TYPES } from "@usecases/types";
+import { UserRepository } from "@user/domain/user-repository";
+import { TYPES } from "user/application/types";
 import { provide } from "inversify-binding-decorators";
 import { inject } from "inversify";
-import { TYPES as RepositoryTypes } from '@adapters/repositories/types';
+import { TYPES as RepositoryTypes } from 'user/domain/types';
 
 @provide(TYPES.FindUserUserCase)
 export class FindUserUserCase {
