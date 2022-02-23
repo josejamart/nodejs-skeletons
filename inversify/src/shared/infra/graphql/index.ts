@@ -1,10 +1,14 @@
 import 'module-alias/register';
-import { registerTypeorm } from '@shared/infra/typeorm/register';
+import { registerTypeorm } from "@shared/infra/inversify/register-typeorm-connection";
 import { ApolloServer, gql } from 'apollo-server';
 import { buildSchema } from "type-graphql";
 import { UserResolver } from '@user/infra/grpahql/resolver';
-import { container } from '@shared/infra/inversify/context-manager';
+import { container } from '@shared/infra/inversify';
+import { Container } from 'inversify';
 
+export interface GraphqlContext extends Request {
+    container?: Container;
+  }
 
 registerTypeorm(container).then(async () => {
     const schema = await buildSchema({
