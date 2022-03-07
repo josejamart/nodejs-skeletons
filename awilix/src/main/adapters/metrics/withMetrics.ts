@@ -1,0 +1,1 @@
+export type withMetrics<T> = (text: string, func: Function) => T;

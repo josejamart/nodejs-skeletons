@@ -1,0 +1,1 @@
+export type withEvents<T> = (text: string, func: Function) => T;

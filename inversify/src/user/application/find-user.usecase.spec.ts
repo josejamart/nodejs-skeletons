@@ -1,6 +1,6 @@
 import 'module-alias/register';
-import { UserRepository } from '@adapters/repositories/user-repository';
-import {FindUserUserCase} from '@usecases/user/findUser';
+import { UserRepository } from 'user/domain/repository';
+import {FindUserUserCase} from 'user/application/find-user.usecase';
 
 describe("Find user Use case", () => {
 
@@ -12,7 +12,7 @@ describe("Find user Use case", () => {
             findAll: jest.fn(),
             findByName: jest.fn().mockReturnValue(user),
         };
-        const usecase = new FindUserUserCase({userRepository, requestId: 10 });
+        const usecase = new FindUserUserCase(userRepository);
 
         expect(usecase.run("first name", "last name")).toBe(user);
     });

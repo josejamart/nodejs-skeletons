@@ -4,7 +4,7 @@ import 'module-alias/register';
 import express , {Request} from "express";
 import users from './user';
 import {container} from '@infra/awilix';
-import { AwilixContainer } from "awilix";
+import { asFunction, AwilixContainer } from "awilix";
 import { registerTypeorm } from "@infra/typeorm/register";
 
 const app = express();
@@ -16,7 +16,10 @@ export interface RequestWithContext extends Request{
 
 registerTypeorm(container).then(()=>{
     app.use((req :RequestWithContext, res, next) => {
-        req.container = container;
+        req.container = container.createScope();
+        req.container.register( {
+          requestId: asFunction(() => Math.random()).scoped()
+        })
         next()
       });
     
